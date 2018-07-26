@@ -21,27 +21,32 @@ export default class NavBars extends React.Component {
     this.handleLondon = this.handleLondon.bind(this);
   }
 handleSD(event){
-  const{dispatch} = this.props;
-  dispatch(updateCityDescription('San Diego'))
+  const{dispatch,date,time} = this.props;
+  dispatch(updateCityDescription('San Diego'));
+  dispatch(updateHistory('San Diego', date, time));
 }
 
 handleNY(event){
-  const{dispatch} = this.props;
-  dispatch(updateCityDescription('New York'))
+  const{dispatch,date,time} = this.props;
+  dispatch(updateCityDescription('New York'));
+  dispatch(updateHistory('New York', date, time));
 }
 handleDC(event){
-  const{dispatch} = this.props;
-  dispatch(updateCityDescription('Washington D.C'))
+  const{dispatch,date,time} = this.props;
+  dispatch(updateCityDescription('Washington DC.'));
+  dispatch(updateHistory('Washington DC.', date, time));
 }
 
 handleLondon(event){
-  const{dispatch} = this.props;
-  dispatch(updateCityDescription('London'))
+  const{dispatch,date,time} = this.props;
+  dispatch(updateCityDescription('London'));
+  dispatch(updateHistory('London', date, time));
 }
 
 handleJapan(event){
-  const{dispatch} = this.props;
-  dispatch(updateCityDescription('Japan'))
+  const{dispatch,date,time} = this.props;
+  dispatch(updateCityDescription('Japan'));
+  dispatch(updateHistory('Japan', date, time));
 }
 
 handleInput(event) {
